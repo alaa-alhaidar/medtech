@@ -25,6 +25,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: #edfaff;
   overflow-x: hidden;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 body::before {
@@ -94,6 +95,7 @@ body::after {
   display: flex;
   justify-content: space-around;
   gap: 22px;
+  min-width: 0;
 }
 
 .main-nav a {
@@ -114,6 +116,7 @@ body::after {
   grid-column: 3;
   position: relative;
   top: -30px;
+  width: 166px;
 }
 
 .language {
@@ -121,7 +124,7 @@ body::after {
   align-items: center;
   justify-content: center;
   gap: 14px;
-  width: 166px;
+  width: 100%;
   height: 66px;
   border: 0;
   border-radius: 40px;
@@ -620,8 +623,7 @@ html[dir="rtl"] .privacy-close {
     font-size: 17px;
   }
 
-  .language-picker,
-  .language {
+  .language-picker {
     width: 112px;
   }
 
@@ -644,33 +646,49 @@ html[dir="rtl"] .privacy-close {
   }
 
   .site-header {
-    position: absolute;
+    position: fixed;
     top: 18px;
     grid-template-columns: 1fr 88px;
     gap: 16px;
     min-height: auto;
+    padding: 12px 14px 14px;
     border-radius: 16px;
   }
 
   .main-nav {
     grid-column: 1 / -1;
     justify-content: flex-start;
+    gap: 8px;
     overflow-x: auto;
     padding: 8px 0 2px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main-nav a {
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
   }
 
   .language-picker {
     grid-column: 2;
     top: 0;
+    width: 82px;
   }
 
   .language {
-    width: 82px;
     height: 50px;
     gap: 12px;
   }
 
   .language-menu {
+    right: 0;
     width: 166px;
   }
 
@@ -680,11 +698,12 @@ html[dir="rtl"] .privacy-close {
   }
 
   .hero {
-    padding-top: 190px;
+    padding-top: 188px;
+    padding-bottom: 142px;
   }
 
   h1 {
-    margin: 18px auto 56px;
+    margin: 10px auto 42px;
     text-align: left;
   }
 
@@ -695,9 +714,11 @@ html[dir="rtl"] .privacy-close {
   .tabs {
     flex-wrap: wrap;
     gap: 12px;
+    width: 100%;
   }
 
   .tab {
+    flex: 1 1 220px;
     min-width: auto;
     min-height: 52px;
     padding: 10px 20px;
@@ -719,7 +740,7 @@ html[dir="rtl"] .privacy-close {
 
   .contact-button {
     right: 12px;
-    bottom: 14px;
+    bottom: calc(64px + env(safe-area-inset-bottom));
     min-height: 58px;
     padding: 0 20px;
     font-size: 18px;
@@ -727,11 +748,18 @@ html[dir="rtl"] .privacy-close {
 
   .privacy-trigger {
     min-height: 46px;
+    max-width: calc(100vw - 24px);
     padding: 0 16px;
     font-size: 14px;
   }
 
+  html[dir="rtl"] .contact-button {
+    left: 12px;
+  }
+
   .privacy-dialog {
+    width: min(100%, 520px);
+    max-height: calc(100vh - 32px);
     padding: 28px 20px;
   }
 
@@ -754,15 +782,15 @@ html[dir="rtl"] .privacy-close {
   }
 
   .brand-text strong {
-    font-size: 38px;
+    font-size: 34px;
   }
 
   .brand-text span {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .main-nav a {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .hero-content {
@@ -770,10 +798,45 @@ html[dir="rtl"] .privacy-close {
   }
 
   h1 {
-    font-size: 38px;
+    font-size: 34px;
+    line-height: 1.05;
   }
 
   .intro-panel {
     width: 100%;
+    padding: 24px 18px;
+  }
+
+  .intro-panel p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .quick-links {
+    width: calc(100vw - 28px);
+  }
+
+  .contact-button {
+    left: 14px;
+    right: 14px;
+    justify-content: center;
+    min-height: 54px;
+    font-size: 17px;
+  }
+
+  html[dir="rtl"] .contact-button {
+    left: 14px;
+    right: 14px;
+  }
+
+  .privacy-trigger {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  html[dir="rtl"] .privacy-trigger {
+    left: 0;
+    right: 0;
+    border-radius: 0;
   }
 }
