@@ -303,7 +303,8 @@ h1 > span:last-child {
   margin-bottom: 0;
 }
 
-.products-panel {
+.products-panel,
+.contact-panel {
   width: min(865px, calc(100vw - 42px));
   margin: 18px 0 0 60px;
   padding: 48px 64px;
@@ -313,7 +314,8 @@ h1 > span:last-child {
   backdrop-filter: blur(3px);
 }
 
-.products-panel h2 {
+.products-panel h2,
+.contact-panel h2 {
   margin: 0 0 14px;
   color: var(--accent-dark);
   font-size: 27px;
@@ -328,6 +330,39 @@ h1 > span:last-child {
 
 .products-panel p:last-child {
   margin-bottom: 0;
+}
+
+.contact-list {
+  display: grid;
+  gap: 18px;
+  margin: 24px 0 0;
+}
+
+.contact-list div {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 18px;
+}
+
+.contact-list dt {
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.contact-list dd {
+  margin: 0;
+  color: var(--text);
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+.contact-list a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  color: var(--accent-dark);
 }
 
 .contact-button {
@@ -578,7 +613,8 @@ html[dir="rtl"] .language-menu button {
 
 html[dir="rtl"] .hero-content,
 html[dir="rtl"] .intro-panel,
-html[dir="rtl"] .products-panel {
+html[dir="rtl"] .products-panel,
+html[dir="rtl"] .contact-panel {
   direction: rtl;
 }
 
@@ -597,6 +633,11 @@ html[dir="rtl"] .intro-panel {
 }
 
 html[dir="rtl"] .products-panel {
+  margin-right: 60px;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .contact-panel {
   margin-right: 60px;
   margin-left: 0;
 }
@@ -641,13 +682,15 @@ html[dir="rtl"] .privacy-close {
 
   .tabs,
   .intro-panel,
-  .products-panel {
+  .products-panel,
+  .contact-panel {
     margin-left: 0;
   }
 
   html[dir="rtl"] .tabs,
   html[dir="rtl"] .intro-panel,
-  html[dir="rtl"] .products-panel {
+  html[dir="rtl"] .products-panel,
+  html[dir="rtl"] .contact-panel {
     margin-right: 0;
   }
 }
@@ -744,7 +787,8 @@ html[dir="rtl"] .privacy-close {
     border-radius: 28px;
   }
 
-  .products-panel {
+  .products-panel,
+  .contact-panel {
     padding: 26px 22px;
     border-radius: 24px;
   }
@@ -753,12 +797,19 @@ html[dir="rtl"] .privacy-close {
     font-size: 18px;
   }
 
-  .products-panel h2 {
+  .products-panel h2,
+  .contact-panel h2 {
     font-size: 24px;
   }
 
-  .products-panel p {
+  .products-panel p,
+  .contact-list dd {
     font-size: 18px;
+  }
+
+  .contact-list div {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
   .contact-button {
@@ -830,7 +881,8 @@ html[dir="rtl"] .privacy-close {
     padding: 24px 18px;
   }
 
-  .products-panel {
+  .products-panel,
+  .contact-panel {
     width: 100%;
     padding: 22px 18px;
   }
@@ -840,11 +892,13 @@ html[dir="rtl"] .privacy-close {
     line-height: 1.6;
   }
 
-  .products-panel h2 {
+  .products-panel h2,
+  .contact-panel h2 {
     font-size: 21px;
   }
 
-  .products-panel p {
+  .products-panel p,
+  .contact-list dd {
     font-size: 16px;
     line-height: 1.55;
   }

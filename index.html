@@ -19,7 +19,7 @@
         <a class="active" href="#about" data-view="about" data-i18n="navAbout">Über uns</a>
         <a href="#products" data-view="products" data-i18n="navProducts">Produkte aus Deutschland</a>
         <a href="#products" data-view="products" data-secondary-view data-i18n="navConsulting">Beratung</a>
-        <a href="#contact" data-i18n="navContact">Kontakt</a>
+        <a href="#contact" data-view="contact" data-i18n="navContact">Kontakt</a>
       </nav>
 
       <div class="language-picker">
@@ -84,6 +84,24 @@
             Bei Bedarf besorgen wir passende Teile und organisieren die
             Lieferung.
           </p>
+        </article>
+
+        <article class="contact-panel content-panel" id="contact" data-panel="contact" hidden>
+          <h2 data-i18n="contactTitle">Kontakt</h2>
+          <dl class="contact-list">
+            <div>
+              <dt data-i18n="mobileLabel">Mobil</dt>
+              <dd><a href="tel:+4917658626422">0176 58626422</a></dd>
+            </div>
+            <div>
+              <dt data-i18n="emailLabel">E-Mail</dt>
+              <dd><a href="mailto:info@alaa-medical-solution.de">info@alaa-medical-solution.de</a></dd>
+            </div>
+            <div>
+              <dt data-i18n="addressLabel">Adresse</dt>
+              <dd>Neuendorferstrasse 20<br />14480 Potsdam<br />Deutschland</dd>
+            </div>
+          </dl>
         </article>
       </section>
 
@@ -158,7 +176,7 @@
       </section>
     </div>
 
-    <a class="contact-button" id="contact" href="mailto:info@alaa-medical-solution.de">
+    <a class="contact-button" href="mailto:info@alaa-medical-solution.de">
       <span class="chat-icon" aria-hidden="true"></span>
       <span data-i18n="contactButton">Kontakt aufnehmen</span>
     </a>
@@ -184,6 +202,8 @@
             "Wir bieten Dialyse-Schlauchsysteme, Dialysatoren, Nadeln und Maschinenteile direkt von Herstellern und Partnern an.",
           productsSupport:
             "Bei Bedarf besorgen wir passende Teile und organisieren die Lieferung.",
+          contactTitle: "Kontakt",
+          mobileLabel: "Mobil",
           consultingTitle: "Beratung",
           consultingText: "Bedarf klären, passende Produkte finden, Angebote vorbereiten",
           customersTitle: "Kunden",
@@ -207,7 +227,7 @@
           operatorLabel: "Anbieter",
           emailLabel: "E-Mail",
           addressLabel: "Adresse",
-          addressPlaceholder: "Bitte vollständige Geschäftsadresse ergänzen.",
+          addressPlaceholder: "Neuendorferstrasse 20, 14480 Potsdam, Deutschland",
           privacyClose: "Verstanden",
           contactButton: "Kontakt aufnehmen",
           languageLabel: "Sprache auf Arabisch umschalten",
@@ -231,6 +251,8 @@
             "نوفر أنظمة خراطيم غسيل الكلى، الديالايزر، الإبر وقطع غيار الأجهزة مباشرة من الشركات المصنعة والشركاء.",
           productsSupport:
             "وعند الحاجة نؤمن القطع المناسبة وننظم عملية التوريد.",
+          contactTitle: "تواصل معنا",
+          mobileLabel: "الجوال",
           consultingTitle: "استشارة",
           consultingText: "تحديد الاحتياج، اختيار المنتجات المناسبة، وتجهيز العروض",
           customersTitle: "العملاء",
@@ -253,7 +275,7 @@
           operatorLabel: "المزود",
           emailLabel: "البريد الإلكتروني",
           addressLabel: "العنوان",
-          addressPlaceholder: "يرجى إضافة عنوان الشركة الكامل.",
+          addressPlaceholder: "Neuendorferstrasse 20، 14480 Potsdam، Deutschland",
           privacyClose: "فهمت",
           contactButton: "تواصل معنا",
           languageLabel: "التبديل إلى اللغة الألمانية",
