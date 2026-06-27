@@ -277,6 +277,10 @@ h1 > span:last-child {
   background: linear-gradient(135deg, var(--accent), #0d8fb2);
 }
 
+.content-panel[hidden] {
+  display: none;
+}
+
 .intro-panel {
   width: min(865px, calc(100vw - 42px));
   margin: 18px 0 0 60px;
@@ -301,11 +305,11 @@ h1 > span:last-child {
 
 .products-panel {
   width: min(865px, calc(100vw - 42px));
-  margin: 24px 0 0 60px;
-  padding: 34px 48px;
-  border: 2px solid rgba(24, 183, 216, 0.22);
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.78);
+  margin: 18px 0 0 60px;
+  padding: 48px 64px;
+  border: 3px solid rgba(226, 226, 226, 0.92);
+  border-radius: 40px;
+  background: var(--panel);
   backdrop-filter: blur(3px);
 }
 

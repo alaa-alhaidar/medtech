@@ -16,9 +16,9 @@
       </a>
 
       <nav class="main-nav" aria-label="Navigation">
-        <a class="active" href="#about" data-i18n="navAbout">Über uns</a>
-        <a href="#products" data-i18n="navProducts">Produkte aus Deutschland</a>
-        <a href="#services" data-i18n="navConsulting">Beratung</a>
+        <a class="active" href="#about" data-view="about" data-i18n="navAbout">Über uns</a>
+        <a href="#products" data-view="products" data-i18n="navProducts">Produkte aus Deutschland</a>
+        <a href="#products" data-view="products" data-secondary-view data-i18n="navConsulting">Beratung</a>
         <a href="#contact" data-i18n="navContact">Kontakt</a>
       </nav>
 
@@ -55,11 +55,11 @@
         </h1>
 
         <div class="tabs" role="list" aria-label="Schwerpunkte">
-          <a class="tab active" href="#about" role="listitem" data-i18n="tabAbout">Über uns</a>
-          <a class="tab" href="#products" role="listitem" data-i18n="tabProducts">Beratung &amp; Produkte</a>
+          <a class="tab active" href="#about" role="listitem" data-view="about" data-i18n="tabAbout">Über uns</a>
+          <a class="tab" href="#products" role="listitem" data-view="products" data-i18n="tabProducts">Beratung &amp; Produkte</a>
         </div>
 
-        <article class="intro-panel" id="about">
+        <article class="intro-panel content-panel active" id="about" data-panel="about">
           <p data-i18n="introOne">
             Wir sind eine Firma aus Deutschland und unterstützen den syrischen
             Markt mit medizinischen Produkten aus Deutschland.
@@ -74,7 +74,7 @@
           </p>
         </article>
 
-        <article class="products-panel" id="products">
+        <article class="products-panel content-panel" id="products" data-panel="products" hidden>
           <h2 data-i18n="productsTitle">Produkte aus Deutschland</h2>
           <p data-i18n="productsIntro">
             Wir bieten Dialyse-Schlauchsysteme, Dialysatoren, Nadeln und
@@ -268,6 +268,8 @@
       const privacyTrigger = document.querySelector(".privacy-trigger");
       const privacyOverlay = document.querySelector(".privacy-overlay");
       const privacyCloseButtons = document.querySelectorAll(".privacy-close, .privacy-accept");
+      const viewLinks = document.querySelectorAll("[data-view]");
+      const contentPanels = document.querySelectorAll("[data-panel]");
 
       function setLanguage(language) {
         document.documentElement.lang = language;
@@ -304,6 +306,28 @@
         }
       });
 
+      function setView(view) {
+        contentPanels.forEach((panel) => {
+          const isActive = panel.dataset.panel === view;
+          panel.hidden = !isActive;
+          panel.classList.toggle("active", isActive);
+          panel.setAttribute("aria-hidden", String(!isActive));
+        });
+        viewLinks.forEach((link) => {
+          link.classList.toggle(
+            "active",
+            link.dataset.view === view && !link.hasAttribute("data-secondary-view")
+          );
+        });
+      }
+
+      viewLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          setView(link.dataset.view);
+        });
+      });
+
       privacyTrigger.addEventListener("click", () => {
         privacyOverlay.hidden = false;
       });
@@ -321,6 +345,7 @@
       });
 
       setLanguage("de");
+      setView("about");
     </script>
   </body>
 </html>
