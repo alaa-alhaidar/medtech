@@ -236,11 +236,18 @@ h1 {
 }
 
 h1 span {
+  display: block;
   color: var(--ink);
 }
 
 h1 > span:first-child {
+  margin-bottom: 10px;
   color: inherit;
+  font-size: 0.9em;
+}
+
+h1 > span:last-child {
+  font-size: 1.08em;
 }
 
 .tabs {
