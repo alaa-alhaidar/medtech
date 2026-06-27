@@ -299,52 +299,6 @@ h1 > span:last-child {
   margin-bottom: 0;
 }
 
-.quick-links {
-  display: grid;
-  grid-template-columns: minmax(280px, 460px);
-  gap: 20px;
-  width: min(1120px, 88vw);
-  margin: 54px auto 0;
-  justify-content: center;
-}
-
-.quick-links div {
-  padding: 22px 24px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 12px 35px rgba(29, 55, 79, 0.08);
-}
-
-.quick-links strong,
-.quick-links span {
-  display: block;
-}
-
-.quick-links strong {
-  margin-bottom: 8px;
-  color: var(--accent-dark);
-  font-size: 18px;
-}
-
-.quick-links span {
-  font-size: 15px;
-  line-height: 1.45;
-}
-
-.product-list {
-  display: grid;
-  gap: 6px;
-  margin: 0;
-  padding-left: 18px;
-  font-size: 15px;
-  line-height: 1.35;
-}
-
-html[dir="rtl"] .product-list {
-  padding-right: 18px;
-  padding-left: 0;
-}
-
 .contact-button {
   position: fixed;
   right: 14px;
@@ -592,7 +546,6 @@ html[dir="rtl"] .language-menu button {
 }
 
 html[dir="rtl"] .hero-content,
-html[dir="rtl"] .quick-links,
 html[dir="rtl"] .intro-panel {
   direction: rtl;
 }
@@ -756,10 +709,6 @@ html[dir="rtl"] .privacy-close {
     font-size: 18px;
   }
 
-  .quick-links {
-    grid-template-columns: 1fr;
-  }
-
   .contact-button {
     right: 12px;
     bottom: calc(64px + env(safe-area-inset-bottom));
@@ -832,10 +781,6 @@ html[dir="rtl"] .privacy-close {
   .intro-panel p {
     font-size: 16px;
     line-height: 1.6;
-  }
-
-  .quick-links {
-    width: calc(100vw - 28px);
   }
 
   .contact-button {

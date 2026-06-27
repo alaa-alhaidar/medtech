@@ -75,17 +75,6 @@
         </article>
       </section>
 
-      <section class="quick-links" aria-label="Weitere Bereiche">
-        <div id="products">
-          <strong data-i18n="productsTitle">Produkte aus Deutschland</strong>
-          <ul class="product-list" data-i18n-list="productsList">
-            <li>Dialysefilter</li>
-            <li>Nadeln</li>
-            <li>Schlauchsysteme</li>
-            <li>Ersatzteile für Dialysemaschinen</li>
-          </ul>
-        </div>
-      </section>
     </main>
 
     <button class="privacy-trigger" type="button" data-i18n="privacyTrigger">
@@ -178,13 +167,6 @@
             "Unser Schwerpunkt liegt auf Dialyseprodukten und weiterer Medizintechnik für Zentren, Kliniken und Praxen in Syrien.",
           introThree:
             "Wir helfen bei der Produktauswahl, Anfrage, Abstimmung mit Lieferanten und der Vorbereitung für den Export nach Syrien.",
-          productsTitle: "Produkte aus Deutschland",
-          productsList: [
-            "Dialysefilter",
-            "Nadeln",
-            "Schlauchsysteme",
-            "Ersatzteile für Dialysemaschinen",
-          ],
           consultingTitle: "Beratung",
           consultingText: "Bedarf klären, passende Produkte finden, Angebote vorbereiten",
           customersTitle: "Kunden",
@@ -227,13 +209,6 @@
             "ينصب تركيزنا على منتجات غسيل الكلى والتقنيات الطبية الأخرى للمراكز والعيادات في سوريا.",
           introThree:
             "نساعد في اختيار المنتجات، وتجهيز الطلبات، والتنسيق مع الموردين، والتحضير للتصدير إلى سوريا.",
-          productsTitle: "منتجات من ألمانيا",
-          productsList: [
-            "فلاتر غسيل الكلى",
-            "الإبر",
-            "أنظمة الخراطيم",
-            "قطع غيار أجهزة غسيل الكلى",
-          ],
           consultingTitle: "استشارة",
           consultingText: "تحديد الاحتياج، اختيار المنتجات المناسبة، وتجهيز العروض",
           customersTitle: "العملاء",
@@ -277,11 +252,6 @@
         document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
         document.querySelectorAll("[data-i18n]").forEach((element) => {
           element.textContent = translations[language][element.dataset.i18n];
-        });
-        document.querySelectorAll("[data-i18n-list]").forEach((element) => {
-          element.innerHTML = translations[language][element.dataset.i18nList]
-            .map((item) => `<li>${item}</li>`)
-            .join("");
         });
         languageCode.textContent = language === "ar" ? "AR" : "DE";
         flag.classList.toggle("arabic", language === "ar");
