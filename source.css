@@ -303,22 +303,7 @@ h1 > span:last-child {
   margin-bottom: 0;
 }
 
-.owner-info {
-  margin-top: 30px;
-  padding-top: 26px;
-  border-top: 1px solid rgba(16, 34, 63, 0.14);
-}
-
-.owner-info h2 {
-  margin: 0 0 12px;
-  color: var(--accent-dark);
-  font-size: 27px;
-}
-
-.owner-info p {
-  margin-bottom: 0;
-}
-
+.owner-panel,
 .products-panel,
 .contact-panel {
   width: min(865px, calc(100vw - 42px));
@@ -330,6 +315,7 @@ h1 > span:last-child {
   backdrop-filter: blur(3px);
 }
 
+.owner-panel h2,
 .products-panel h2,
 .contact-panel h2 {
   margin: 0 0 14px;
@@ -337,6 +323,7 @@ h1 > span:last-child {
   font-size: 27px;
 }
 
+.owner-panel p,
 .products-panel p {
   margin: 0 0 12px;
   color: var(--text);
@@ -344,6 +331,7 @@ h1 > span:last-child {
   line-height: 1.55;
 }
 
+.owner-panel p:last-child,
 .products-panel p:last-child {
   margin-bottom: 0;
 }
@@ -629,6 +617,7 @@ html[dir="rtl"] .language-menu button {
 
 html[dir="rtl"] .hero-content,
 html[dir="rtl"] .intro-panel,
+html[dir="rtl"] .owner-panel,
 html[dir="rtl"] .products-panel,
 html[dir="rtl"] .contact-panel {
   direction: rtl;
@@ -644,6 +633,11 @@ html[dir="rtl"] .tabs {
 }
 
 html[dir="rtl"] .intro-panel {
+  margin-right: 60px;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .owner-panel {
   margin-right: 60px;
   margin-left: 0;
 }
@@ -698,6 +692,7 @@ html[dir="rtl"] .privacy-close {
 
   .tabs,
   .intro-panel,
+  .owner-panel,
   .products-panel,
   .contact-panel {
     margin-left: 0;
@@ -705,6 +700,7 @@ html[dir="rtl"] .privacy-close {
 
   html[dir="rtl"] .tabs,
   html[dir="rtl"] .intro-panel,
+  html[dir="rtl"] .owner-panel,
   html[dir="rtl"] .products-panel,
   html[dir="rtl"] .contact-panel {
     margin-right: 0;
@@ -803,6 +799,7 @@ html[dir="rtl"] .privacy-close {
     border-radius: 28px;
   }
 
+  .owner-panel,
   .products-panel,
   .contact-panel {
     padding: 26px 22px;
@@ -813,15 +810,13 @@ html[dir="rtl"] .privacy-close {
     font-size: 18px;
   }
 
-  .owner-info h2 {
-    font-size: 24px;
-  }
-
+  .owner-panel h2,
   .products-panel h2,
   .contact-panel h2 {
     font-size: 24px;
   }
 
+  .owner-panel p,
   .products-panel p,
   .contact-list dd {
     font-size: 18px;
@@ -901,6 +896,7 @@ html[dir="rtl"] .privacy-close {
     padding: 24px 18px;
   }
 
+  .owner-panel,
   .products-panel,
   .contact-panel {
     width: 100%;
@@ -912,20 +908,13 @@ html[dir="rtl"] .privacy-close {
     line-height: 1.6;
   }
 
-  .owner-info {
-    margin-top: 24px;
-    padding-top: 22px;
-  }
-
-  .owner-info h2 {
-    font-size: 21px;
-  }
-
+  .owner-panel h2,
   .products-panel h2,
   .contact-panel h2 {
     font-size: 21px;
   }
 
+  .owner-panel p,
   .products-panel p,
   .contact-list dd {
     font-size: 16px;
