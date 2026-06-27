@@ -299,6 +299,33 @@ h1 > span:last-child {
   margin-bottom: 0;
 }
 
+.products-panel {
+  width: min(865px, calc(100vw - 42px));
+  margin: 24px 0 0 60px;
+  padding: 34px 48px;
+  border: 2px solid rgba(24, 183, 216, 0.22);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(3px);
+}
+
+.products-panel h2 {
+  margin: 0 0 14px;
+  color: var(--accent-dark);
+  font-size: 27px;
+}
+
+.products-panel p {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 21px;
+  line-height: 1.55;
+}
+
+.products-panel p:last-child {
+  margin-bottom: 0;
+}
+
 .contact-button {
   position: fixed;
   right: 14px;
@@ -546,7 +573,8 @@ html[dir="rtl"] .language-menu button {
 }
 
 html[dir="rtl"] .hero-content,
-html[dir="rtl"] .intro-panel {
+html[dir="rtl"] .intro-panel,
+html[dir="rtl"] .products-panel {
   direction: rtl;
 }
 
@@ -560,6 +588,11 @@ html[dir="rtl"] .tabs {
 }
 
 html[dir="rtl"] .intro-panel {
+  margin-right: 60px;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .products-panel {
   margin-right: 60px;
   margin-left: 0;
 }
@@ -603,12 +636,14 @@ html[dir="rtl"] .privacy-close {
   }
 
   .tabs,
-  .intro-panel {
+  .intro-panel,
+  .products-panel {
     margin-left: 0;
   }
 
   html[dir="rtl"] .tabs,
-  html[dir="rtl"] .intro-panel {
+  html[dir="rtl"] .intro-panel,
+  html[dir="rtl"] .products-panel {
     margin-right: 0;
   }
 }
@@ -705,7 +740,20 @@ html[dir="rtl"] .privacy-close {
     border-radius: 28px;
   }
 
+  .products-panel {
+    padding: 26px 22px;
+    border-radius: 24px;
+  }
+
   .intro-panel p {
+    font-size: 18px;
+  }
+
+  .products-panel h2 {
+    font-size: 24px;
+  }
+
+  .products-panel p {
     font-size: 18px;
   }
 
@@ -778,9 +826,23 @@ html[dir="rtl"] .privacy-close {
     padding: 24px 18px;
   }
 
+  .products-panel {
+    width: 100%;
+    padding: 22px 18px;
+  }
+
   .intro-panel p {
     font-size: 16px;
     line-height: 1.6;
+  }
+
+  .products-panel h2 {
+    font-size: 21px;
+  }
+
+  .products-panel p {
+    font-size: 16px;
+    line-height: 1.55;
   }
 
   .contact-button {
