@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alaa Medical Solution</title>
+    <link rel="stylesheet" href="source.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Hauptnavigation">
+      <a class="brand" href="#" aria-label="Alaa Medical Solution Startseite">
+        <span class="brand-text">
+          <strong>AMS</strong>
+          <span>Alaa Medical Solution</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navigation">
+        <a class="active" href="#about" data-i18n="navAbout">Über uns</a>
+        <a href="#products" data-i18n="navProducts">Produkte aus Deutschland</a>
+        <a href="#services" data-i18n="navConsulting">Beratung</a>
+        <a href="#contact" data-i18n="navContact">Kontakt</a>
+      </nav>
+
+      <div class="language-picker">
+        <button
+          class="language"
+          type="button"
+          aria-label="Sprache auswählen"
+          aria-expanded="false"
+          aria-controls="language-menu"
+        >
+          <span class="flag" aria-hidden="true"></span>
+          <span class="language-code">DE</span>
+          <span class="chevron" aria-hidden="true"></span>
+        </button>
+        <div class="language-menu" id="language-menu" hidden>
+          <button type="button" data-language-option="de">
+            <span class="flag" aria-hidden="true"></span>
+            Deutsch
+          </button>
+          <button type="button" data-language-option="ar">
+            <span class="flag arabic" aria-hidden="true"></span>
+            العربية
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="hero">
+      <section class="hero-content" aria-labelledby="hero-title">
+        <h1 id="hero-title">
+          <span data-i18n="heroLead">Herzlich Willkommen bei</span>
+          <span>Alaa Medical Solution</span>
+        </h1>
+
+        <div class="tabs" role="list" aria-label="Schwerpunkte">
+          <a class="tab active" href="#about" role="listitem" data-i18n="tabAbout">Über uns</a>
+          <a class="tab" href="#products" role="listitem" data-i18n="tabProducts">Beratung &amp; Produkte</a>
+        </div>
+
+        <article class="intro-panel" id="about">
+          <p data-i18n="introOne">
+            Wir sind eine Firma aus Deutschland und unterstützen den syrischen
+            Markt mit medizinischen Produkten aus Deutschland.
+          </p>
+          <p data-i18n="introTwo">
+            Unser Schwerpunkt liegt auf Dialyseprodukten und weiterer
+            Medizintechnik für Zentren, Kliniken und Praxen in Syrien.
+          </p>
+          <p data-i18n="introThree">
+            Wir helfen bei der Produktauswahl, Anfrage, Abstimmung mit
+            Lieferanten und der Vorbereitung für den Export nach Syrien.
+          </p>
+        </article>
+      </section>
+
+      <section class="quick-links" aria-label="Weitere Bereiche">
+        <div id="products">
+          <strong data-i18n="productsTitle">Produkte aus Deutschland</strong>
+          <span data-i18n="productsText">Dialyse, Diagnostik, Klinikbedarf und Medizintechnik</span>
+        </div>
+        <div id="services">
+          <strong data-i18n="consultingTitle">Beratung</strong>
+          <span data-i18n="consultingText">Bedarf klären, passende Produkte finden, Angebote vorbereiten</span>
+        </div>
+        <div id="categories">
+          <strong data-i18n="customersTitle">Kunden</strong>
+          <span data-i18n="customersText">Kliniken, Praxen, Händler und Hilfsorganisationen</span>
+        </div>
+      </section>
+    </main>
+
+    <button class="privacy-trigger" type="button" data-i18n="privacyTrigger">
+      Datenschutz, Cookies & Impressum
+    </button>
+
+    <div class="privacy-overlay" hidden>
+      <section
+        class="privacy-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="privacy-title"
+      >
+        <button class="privacy-close" type="button" aria-label="Dialog schließen">×</button>
+        <h2 id="privacy-title" data-i18n="privacyTitle">Datenschutz, Cookies & Impressum</h2>
+        <p data-i18n="privacyIntro">
+          Diese Musterseite verwendet keine Tracking-, Marketing- oder Statistik-Cookies.
+          Die Sprachumschaltung läuft nur im aktuellen Browserfenster und wird nicht gespeichert.
+        </p>
+
+        <div class="privacy-options" aria-label="Cookie Kategorien">
+          <article>
+            <div>
+              <strong data-i18n="necessaryTitle">Notwendige Funktionen</strong>
+              <span data-i18n="necessaryText">Erforderlich für Darstellung, Navigation und Sprache im aktuellen Besuch.</span>
+            </div>
+            <span class="privacy-status" data-i18n="alwaysActive">Immer aktiv</span>
+          </article>
+          <article>
+            <div>
+              <strong data-i18n="analyticsTitle">Statistik</strong>
+              <span data-i18n="analyticsText">Nicht eingebunden. Es werden keine Analyse-Cookies gesetzt.</span>
+            </div>
+            <span class="privacy-status inactive" data-i18n="notUsed">Nicht verwendet</span>
+          </article>
+          <article>
+            <div>
+              <strong data-i18n="marketingTitle">Marketing</strong>
+              <span data-i18n="marketingText">Nicht eingebunden. Es werden keine Werbe-Cookies gesetzt.</span>
+            </div>
+            <span class="privacy-status inactive" data-i18n="notUsed">Nicht verwendet</span>
+          </article>
+        </div>
+
+        <div class="privacy-legal">
+          <h3 data-i18n="legalTitle">Rechtliche Angaben ergänzen</h3>
+          <p data-i18n="legalText">
+            Für eine öffentliche Website müssen Impressum und Datenschutzerklärung mit den echten Unternehmensdaten ergänzt werden.
+          </p>
+          <dl>
+            <div>
+              <dt data-i18n="operatorLabel">Anbieter</dt>
+              <dd>Alaa Medical Solution</dd>
+            </div>
+            <div>
+              <dt data-i18n="emailLabel">E-Mail</dt>
+              <dd>info@alaa-medical-solution.de</dd>
+            </div>
+            <div>
+              <dt data-i18n="addressLabel">Adresse</dt>
+              <dd data-i18n="addressPlaceholder">Bitte vollständige Geschäftsadresse ergänzen.</dd>
+            </div>
+          </dl>
+        </div>
+
+        <button class="privacy-accept" type="button" data-i18n="privacyClose">
+          Verstanden
+        </button>
+      </section>
+    </div>
+
+    <a class="contact-button" id="contact" href="mailto:info@alaa-medical-solution.de">
+      <span class="chat-icon" aria-hidden="true"></span>
+      <span data-i18n="contactButton">Kontakt aufnehmen</span>
+    </a>
+
+    <script>
+      const translations = {
+        de: {
+          navAbout: "Über uns",
+          navProducts: "Produkte aus Deutschland",
+          navConsulting: "Beratung",
+          navContact: "Kontakt",
+          heroLead: "Herzlich Willkommen bei",
+          tabAbout: "Über uns",
+          tabProducts: "Beratung & Produkte",
+          introOne:
+            "Wir sind eine Firma aus Deutschland und unterstützen den syrischen Markt mit medizinischen Produkten aus Deutschland.",
+          introTwo:
+            "Unser Schwerpunkt liegt auf Dialyseprodukten und weiterer Medizintechnik für Zentren, Kliniken und Praxen in Syrien.",
+          introThree:
+            "Wir helfen bei der Produktauswahl, Anfrage, Abstimmung mit Lieferanten und der Vorbereitung für den Export nach Syrien.",
+          productsTitle: "Produkte aus Deutschland",
+          productsText: "Dialyse, Diagnostik, Klinikbedarf und Medizintechnik",
+          consultingTitle: "Beratung",
+          consultingText: "Bedarf klären, passende Produkte finden, Angebote vorbereiten",
+          customersTitle: "Kunden",
+          customersText: "Kliniken, Praxen, Händler und Hilfsorganisationen",
+          privacyTrigger: "Datenschutz, Cookies & Impressum",
+          privacyTitle: "Datenschutz, Cookies & Impressum",
+          privacyIntro:
+            "Diese Musterseite verwendet keine Tracking-, Marketing- oder Statistik-Cookies. Die Sprachumschaltung läuft nur im aktuellen Browserfenster und wird nicht gespeichert.",
+          necessaryTitle: "Notwendige Funktionen",
+          necessaryText:
+            "Erforderlich für Darstellung, Navigation und Sprache im aktuellen Besuch.",
+          alwaysActive: "Immer aktiv",
+          analyticsTitle: "Statistik",
+          analyticsText: "Nicht eingebunden. Es werden keine Analyse-Cookies gesetzt.",
+          marketingTitle: "Marketing",
+          marketingText: "Nicht eingebunden. Es werden keine Werbe-Cookies gesetzt.",
+          notUsed: "Nicht verwendet",
+          legalTitle: "Rechtliche Angaben ergänzen",
+          legalText:
+            "Für eine öffentliche Website müssen Impressum und Datenschutzerklärung mit den echten Unternehmensdaten ergänzt werden.",
+          operatorLabel: "Anbieter",
+          emailLabel: "E-Mail",
+          addressLabel: "Adresse",
+          addressPlaceholder: "Bitte vollständige Geschäftsadresse ergänzen.",
+          privacyClose: "Verstanden",
+          contactButton: "Kontakt aufnehmen",
+          languageLabel: "Sprache auf Arabisch umschalten",
+        },
+        ar: {
+          navAbout: "من نحن",
+          navProducts: "منتجات من ألمانيا",
+          navConsulting: "استشارة",
+          navContact: "تواصل معنا",
+          heroLead: "أهلاً وسهلاً بكم في",
+          tabAbout: "من نحن",
+          tabProducts: "استشارة ومنتجات",
+          introOne:
+            "نحن شركة من ألمانيا ندعم السوق السوري بالمنتجات الطبية القادمة من ألمانيا.",
+          introTwo:
+            "ينصب تركيزنا على منتجات غسيل الكلى والتقنيات الطبية الأخرى للمراكز والعيادات في سوريا.",
+          introThree:
+            "نساعد في اختيار المنتجات، وتجهيز الطلبات، والتنسيق مع الموردين، والتحضير للتصدير إلى سوريا.",
+          productsTitle: "منتجات من ألمانيا",
+          productsText: "غسيل الكلى، التشخيص، مستلزمات العيادات والتقنيات الطبية",
+          consultingTitle: "استشارة",
+          consultingText: "تحديد الاحتياج، اختيار المنتجات المناسبة، وتجهيز العروض",
+          customersTitle: "العملاء",
+          customersText: "المستشفيات، العيادات، التجار والمنظمات الإنسانية",
+          privacyTrigger: "الخصوصية والملفات والتعريف القانوني",
+          privacyTitle: "الخصوصية وملفات الارتباط والتعريف القانوني",
+          privacyIntro:
+            "هذه الصفحة التجريبية لا تستخدم ملفات تتبع أو تسويق أو إحصاءات. تبديل اللغة يعمل فقط أثناء الزيارة الحالية ولا يتم حفظه.",
+          necessaryTitle: "وظائف ضرورية",
+          necessaryText: "ضرورية لعرض الصفحة والتنقل وتغيير اللغة أثناء الزيارة الحالية.",
+          alwaysActive: "نشطة دائماً",
+          analyticsTitle: "الإحصاءات",
+          analyticsText: "غير مفعلة. لا يتم استخدام ملفات تحليل.",
+          marketingTitle: "التسويق",
+          marketingText: "غير مفعل. لا يتم استخدام ملفات إعلانية.",
+          notUsed: "غير مستخدم",
+          legalTitle: "استكمال البيانات القانونية",
+          legalText:
+            "عند نشر الموقع يجب إضافة صفحة المسؤولية القانونية وسياسة الخصوصية بالبيانات الحقيقية للشركة.",
+          operatorLabel: "المزود",
+          emailLabel: "البريد الإلكتروني",
+          addressLabel: "العنوان",
+          addressPlaceholder: "يرجى إضافة عنوان الشركة الكامل.",
+          privacyClose: "فهمت",
+          contactButton: "تواصل معنا",
+          languageLabel: "التبديل إلى اللغة الألمانية",
+        },
+      };
+
+      const languageButton = document.querySelector(".language");
+      const languageCode = document.querySelector(".language-code");
+      const flag = document.querySelector(".flag");
+      const languageMenu = document.querySelector(".language-menu");
+      const languageOptions = document.querySelectorAll("[data-language-option]");
+      const privacyTrigger = document.querySelector(".privacy-trigger");
+      const privacyOverlay = document.querySelector(".privacy-overlay");
+      const privacyCloseButtons = document.querySelectorAll(".privacy-close, .privacy-accept");
+
+      function setLanguage(language) {
+        document.documentElement.lang = language;
+        document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          element.textContent = translations[language][element.dataset.i18n];
+        });
+        languageCode.textContent = language === "ar" ? "AR" : "DE";
+        flag.classList.toggle("arabic", language === "ar");
+        languageOptions.forEach((option) => {
+          option.classList.toggle("active", option.dataset.languageOption === language);
+        });
+        languageButton.setAttribute("aria-label", translations[language].languageLabel);
+      }
+
+      languageButton.addEventListener("click", () => {
+        const isOpen = !languageMenu.hidden;
+        languageMenu.hidden = isOpen;
+        languageButton.setAttribute("aria-expanded", String(!isOpen));
+      });
+
+      languageOptions.forEach((option) => {
+        option.addEventListener("click", () => {
+          setLanguage(option.dataset.languageOption);
+          languageMenu.hidden = true;
+          languageButton.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      document.addEventListener("click", (event) => {
+        if (!event.target.closest(".language-picker")) {
+          languageMenu.hidden = true;
+          languageButton.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      privacyTrigger.addEventListener("click", () => {
+        privacyOverlay.hidden = false;
+      });
+
+      privacyCloseButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          privacyOverlay.hidden = true;
+        });
+      });
+
+      privacyOverlay.addEventListener("click", (event) => {
+        if (event.target === privacyOverlay) {
+          privacyOverlay.hidden = true;
+        }
+      });
+
+      setLanguage("de");
+    </script>
+  </body>
+</html>
