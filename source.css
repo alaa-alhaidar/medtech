@@ -305,6 +305,7 @@ h1 > span:last-child {
 
 .owner-panel,
 .products-panel,
+.consulting-panel,
 .contact-panel {
   width: min(865px, calc(100vw - 42px));
   margin: 18px 0 0 60px;
@@ -317,6 +318,7 @@ h1 > span:last-child {
 
 .owner-panel h2,
 .products-panel h2,
+.consulting-panel h2,
 .contact-panel h2 {
   margin: 0 0 14px;
   color: var(--accent-dark);
@@ -324,7 +326,8 @@ h1 > span:last-child {
 }
 
 .owner-panel p,
-.products-panel p {
+.products-panel p,
+.consulting-panel p {
   margin: 0 0 12px;
   color: var(--text);
   font-size: 21px;
@@ -332,7 +335,8 @@ h1 > span:last-child {
 }
 
 .owner-panel p:last-child,
-.products-panel p:last-child {
+.products-panel p:last-child,
+.consulting-panel p:last-child {
   margin-bottom: 0;
 }
 
@@ -344,6 +348,10 @@ h1 > span:last-child {
   color: var(--text);
   font-size: 21px;
   line-height: 1.45;
+}
+
+.support-list.compact {
+  margin-top: 20px;
 }
 
 html[dir="rtl"] .support-list {
@@ -634,6 +642,7 @@ html[dir="rtl"] .hero-content,
 html[dir="rtl"] .intro-panel,
 html[dir="rtl"] .owner-panel,
 html[dir="rtl"] .products-panel,
+html[dir="rtl"] .consulting-panel,
 html[dir="rtl"] .contact-panel {
   direction: rtl;
 }
@@ -658,6 +667,11 @@ html[dir="rtl"] .owner-panel {
 }
 
 html[dir="rtl"] .products-panel {
+  margin-right: 60px;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .consulting-panel {
   margin-right: 60px;
   margin-left: 0;
 }
@@ -709,6 +723,7 @@ html[dir="rtl"] .privacy-close {
   .intro-panel,
   .owner-panel,
   .products-panel,
+  .consulting-panel,
   .contact-panel {
     margin-left: 0;
   }
@@ -717,6 +732,7 @@ html[dir="rtl"] .privacy-close {
   html[dir="rtl"] .intro-panel,
   html[dir="rtl"] .owner-panel,
   html[dir="rtl"] .products-panel,
+  html[dir="rtl"] .consulting-panel,
   html[dir="rtl"] .contact-panel {
     margin-right: 0;
   }
@@ -816,6 +832,7 @@ html[dir="rtl"] .privacy-close {
 
   .owner-panel,
   .products-panel,
+  .consulting-panel,
   .contact-panel {
     padding: 26px 22px;
     border-radius: 24px;
@@ -827,12 +844,14 @@ html[dir="rtl"] .privacy-close {
 
   .owner-panel h2,
   .products-panel h2,
+  .consulting-panel h2,
   .contact-panel h2 {
     font-size: 24px;
   }
 
   .owner-panel p,
   .products-panel p,
+  .consulting-panel p,
   .support-list,
   .contact-list dd {
     font-size: 18px;
@@ -914,6 +933,7 @@ html[dir="rtl"] .privacy-close {
 
   .owner-panel,
   .products-panel,
+  .consulting-panel,
   .contact-panel {
     width: 100%;
     padding: 22px 18px;
@@ -926,12 +946,14 @@ html[dir="rtl"] .privacy-close {
 
   .owner-panel h2,
   .products-panel h2,
+  .consulting-panel h2,
   .contact-panel h2 {
     font-size: 21px;
   }
 
   .owner-panel p,
   .products-panel p,
+  .consulting-panel p,
   .support-list,
   .contact-list dd {
     font-size: 16px;
