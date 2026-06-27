@@ -301,10 +301,11 @@ h1 > span:last-child {
 
 .quick-links {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: minmax(280px, 460px);
   gap: 20px;
   width: min(1120px, 88vw);
   margin: 54px auto 0;
+  justify-content: center;
 }
 
 .quick-links div {
