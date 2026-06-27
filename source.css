@@ -303,6 +303,22 @@ h1 > span:last-child {
   margin-bottom: 0;
 }
 
+.owner-info {
+  margin-top: 30px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(16, 34, 63, 0.14);
+}
+
+.owner-info h2 {
+  margin: 0 0 12px;
+  color: var(--accent-dark);
+  font-size: 27px;
+}
+
+.owner-info p {
+  margin-bottom: 0;
+}
+
 .products-panel,
 .contact-panel {
   width: min(865px, calc(100vw - 42px));
@@ -797,6 +813,10 @@ html[dir="rtl"] .privacy-close {
     font-size: 18px;
   }
 
+  .owner-info h2 {
+    font-size: 24px;
+  }
+
   .products-panel h2,
   .contact-panel h2 {
     font-size: 24px;
@@ -890,6 +910,15 @@ html[dir="rtl"] .privacy-close {
   .intro-panel p {
     font-size: 16px;
     line-height: 1.6;
+  }
+
+  .owner-info {
+    margin-top: 24px;
+    padding-top: 22px;
+  }
+
+  .owner-info h2 {
+    font-size: 21px;
   }
 
   .products-panel h2,
