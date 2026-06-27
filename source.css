@@ -330,6 +330,20 @@ h1 > span:last-child {
   line-height: 1.45;
 }
 
+.product-list {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-left: 18px;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+html[dir="rtl"] .product-list {
+  padding-right: 18px;
+  padding-left: 0;
+}
+
 .contact-button {
   position: fixed;
   right: 14px;
