@@ -610,6 +610,20 @@ html[dir="rtl"] .support-list {
   color: var(--text);
 }
 
+.privacy-legal a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.privacy-legal a:hover {
+  color: var(--accent-dark);
+}
+
+.legal-note {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
 .privacy-accept {
   display: inline-flex;
   align-items: center;
