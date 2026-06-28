@@ -393,6 +393,11 @@ html[dir="rtl"] .support-list {
   line-height: 1.5;
 }
 
+.ltr-value {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
 .contact-list a {
   color: var(--text);
   text-decoration: none;
